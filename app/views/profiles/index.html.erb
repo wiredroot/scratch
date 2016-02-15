@@ -1,0 +1,26 @@
+<h1>STORED PROFILES</h1>
+
+<table>
+  <tr>
+    <th>Last Name</th>
+    <th>First Name</th>
+    <th>Job Title</th>
+    <th>Email</th>
+  </tr>
+
+  <% @profiles.each do |profile| %>
+    <tr>
+      <td><%= profile.lastname %></td>
+      <td><%= profile.firstname %></td>
+      <td><%= profile.jobtitle %></td>
+      <td><%= profile.email %></td>
+      <td><%= link_to 'Show', profile_path(profile) %></td>
+      <td><%= link_to 'Edit', edit_profile_path(profile) %></td>
+      <td><%= link_to 'Delete', profile_path(profile),
+              method: :delete,
+              data: { confirm: 'Are you sure?' } %></td>
+    </tr>
+  <% end %>
+</table>
+
+<%= link_to 'New Profile', new_profile_path %>

@@ -1,0 +1,8 @@
+<p>
+  <strong>Transaction Info</strong>
+  
+  <%= @transaction.id %> <%= @transaction.profile_id %> (<%= @transaction.stock_id %>)
+</p>
+
+<%= link_to 'Edit', edit_transaction_path(@transaction) %> |
+<%= link_to 'Back', transactions_path %>

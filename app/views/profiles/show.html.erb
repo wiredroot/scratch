@@ -1,0 +1,16 @@
+<p>
+  <strong>Full Name</strong>
+  <%= @profile.firstname %> <%= @profile.lastname %>, <%= @profile.jobtitle %>
+</p>
+
+<p>
+  <strong>Dates:</strong>
+  Date of Birth: <%= @profile.dob %><br>
+  Hired Date: <%= @profile.hired %><br>
+  Terminated: <%= @profile.terminated %>
+</p>
+
+<%= link_to 'Edit', edit_profile_path(@profile) %> |
+<%= link_to 'Back', profiles_path %>
+
+

@@ -1,0 +1,58 @@
+<%= form_for @profile do |f| %>
+
+  <% if @profile.errors.any? %>
+    <div id="error_explanation">
+      <h2>
+        <%= pluralize(@profile.errors.count, "error") %> prohibited
+        this Profile from being saved:
+      </h2>
+      <ul>
+        <% @profile.errors.full_messages.each do |msg| %>
+          <li><%= msg %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <p>
+    <%= f.label "First Name:" %>  <%= f.text_field :firstname %>
+  </p>
+
+  <p>
+    <%= f.label "Last Name:" %>  <%= f.text_field :lastname %>
+  </p>
+
+  <p>
+    <%= f.label "Job Title:" %>  <%= f.text_field :jobtitle %>
+  </p>
+
+  <strong>DATES:</strong>
+  <p>
+    <%= f.label "Date of Birth" %>  <%= f.text_field :dob %>
+  </p>
+
+  <p>
+    <%= f.label "Date of Hire" %>  <%= f.text_field :hired %>
+  </p>
+
+  <p>
+    <%= f.label "Date of Termination" %>  <%= f.text_field :terminated %>
+  </p>
+
+  <strong>CONTACT INFO:</strong>
+
+  <p>
+    <%= f.label "Work Phone" %> <%= f.text_field :workphone %>
+    <%= f.label "Home Phone" %> <%= f.text_field :homephone %>
+    <%= f.label "E-mail" %> <%= f.text_field :email %>
+  </p>
+
+  <p>
+    <%= f.label "Bio:" %><br>
+    <%= f.text_area :bio %>
+  </p>
+
+  <p>
+    <%= f.submit %>
+  </p>
+<% end %>

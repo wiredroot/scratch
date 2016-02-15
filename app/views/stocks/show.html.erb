@@ -1,0 +1,7 @@
+<p>
+  <strong>Stock Info</strong>
+  $<%= @stock.price %> <%= @stock.company %> (<%= @stock.symbol %>)
+</p>
+
+<%= link_to 'Edit', edit_stock_path(@stock) %> |
+<%= link_to 'Back', stocks_path %>
