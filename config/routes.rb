@@ -1,7 +1,10 @@
 Rails.application.routes.draw do
   # get '/home', to 'pages#home' is how you'd do your own thing
   get 'welcome/index'
-
+  get '/features' => 'pages#features'
+  get '/login' => 'pages#login'
+  get '/enroll' => 'pages#enroll'
+  
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
   

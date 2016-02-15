@@ -1,4 +1,4 @@
 class Transaction < ActiveRecord::Base
-  has_one :profile
+  belongs_to :profile
   has_one :stock
 end

@@ -15,12 +15,20 @@
 @import "bootstrap-sprockets";
 @import "bootstrap";
 
+/* CSS Document */
+
+/* Color References
+Green:		#79B044
+Salmon:		#DD5638
+Blue Gray:	#3E4249
+*/
+
 /* MAIN =========================================*/
 body {
 	margin-top: 50px;
 	font-family: 'acumin-pro', 'Raleway', Helvetica, sans-serif;
 	font-size: 16px;
-	background: url('../img/tile.jpg') top left repeat;
+	background: url('/assets/tile.jpg') top left repeat;
 }
 
 h1, h2, h3, h4, h5, h6 {
@@ -62,6 +70,8 @@ a:hover {
 	color: #C9302C;
 }
 
+/* BUTTON =========================================*/
+
 button, input, .btn, a.btn {
 	-webkit-font-smoothing: antialiased;
 	text-rendering: optimizelegibility;
@@ -91,12 +101,302 @@ button.btn:focus {
 	border-color: #6A9B3D;	
 }
 
+.btn-custom4 {
+  background-color: #5665A9;
+  border-color: #5665A9;
+}
+
+.btn-custom4:hover,
+.btn-custom4:focus,
+.btn-custom4:active,
+.btn-custom4.active {
+  background-color: #4d5b98;
+  border-color: #455187;
+  color: #fff;
+}
+.btn-custom4.disabled:hover,
+.btn-custom4.disabled:focus,
+.btn-custom4.disabled:active,
+.btn-custom4.disabled.active,
+.btn-custom4[disabled]:hover,
+.btn-custom4[disabled]:focus,
+.btn-custom4[disabled]:active,
+.btn-custom4[disabled].active,
+fieldset[disabled] .btn-custom4:hover,
+fieldset[disabled] .btn-custom4:focus,
+fieldset[disabled] .btn-custom4:active,
+fieldset[disabled] .btn-custom4.active {
+  background-color: #5665A9;
+  border-color: #5665A9;
+  color: #fff;
+}
+
+
+/* OTHER =========================================*/
+
 img {
 	max-width: 100%; /* Make our logo same size as its container, so no over-flow */
 }
 
+.modal-content {
+	background: url('/assets/tile.jpg') top left repeat;	
+}
 
-/* FOOTER ====================================== */
+.solobadge {
+	margin-bottom: 20px;
+}
+
+.badge.social {
+	backgrounds: #ccc;
+	font-size: 24px;
+	height: 40px;
+	width: 40px;
+	text-align: center;
+	line-height: 40px; /* Supposed to center vertically the social icons but didn't work */
+	margin: 0 5px 20px 0;
+	padding: 0;
+	-webkit-border-radius: 50%; /* Makes a circle */	
+	-moz-border-radius: 50%;  /* Makes a circle */
+	border-radius: 50%;  /* Makes a circle */
+	color: white;
+}
+
+.badge.social.twitter:hover {
+	background: #55ACEE;	
+}
+.badge.social.facebook:hover {
+	background: #3B5998;	
+}
+.badge.social.gplus:hover {
+	background: #DB4B39;	
+}
+
+blockquote {
+	border: none;
+	padding: 0;
+	font-style: italic;
+	text-align: left;	
+}
+
+blockquote cite {
+	display: block;
+	color: #777;
+	margin: 15px 0 0 0;	
+}
+
+blockquote:before {
+	display: none;	/* Removes leading space before the quote */
+}
+
+
+/* HERO =========================================*/
+
+#hero {
+	/*background: url('hero-bg.jpg') 50% 0 repeat fixed; */
+	background-color: rgba(47,60,51, 0.95);
+	min-height: 500px;
+	padding: 40px 0px;
+	color: white;
+	-webkit-font-smoothing: antialiased;
+	text-rendering: optimizelegibility;
+		
+}
+
+#hero article {
+	width: 100%;
+	text-align: center;
+}
+
+#hero .hero-text {
+	margin-top: 30px;	
+}
+
+/* PRICE =========================================*/
+
+#price-timeline {
+	margin: 30px 0 60px;
+	text-align: center;	
+}
+
+#price-timeline .price {
+	display: inline-block;
+	margin: 0 2% 0 0;
+	width: 30%;
+	background: #18251C;
+	padding: 10px 20px 30px;
+	position: relative;
+	vertical-align: top;
+}
+
+#price-timeline .price-active {
+	background: #DD5638;
+}
+
+#price-timeline .price span {
+	background: #00A038;
+	display: block;
+	height: 70px;
+	width: 70px;
+	text-align: center;
+	line-height: 70px; /* Make it same size as height of box, and it will be centered */
+	font-weight: bold;
+	font-size: 24px;
+	
+	/* Make it a Circle */
+	border-radius: 50%; 
+	-webkit-border-radius: 50%;
+	-moz-border-radius: 50%;
+	position: absolute;
+	bottom: -35px; /* Half the height of the box to drop the circle down*/
+	
+	/* Center the circle horizontally in the box */
+	left: 50%;
+	margin-left: -35px;
+}
+
+#price-timeline h4 {
+	margin: 0 0 10px;	
+}
+
+#price-timeline h4 small {
+	color: white;
+	font-weight: bold;
+	display: block; /* Puts the small text on its own line */	
+}
+
+/* LAYOUT =========================================*/
+
+.row + .row { /* Looks for a row class that comes immediately after another row class */
+	margin-top: 20px;
+}
+
+section {
+	padding: 80px 0;
+}
+
+section.main-content {
+	padding: 40px 0;
+
+}
+
+.section-header {
+	text-align: center;	
+}
+
+.section h2 {
+	margin: 20px 0 40px;
+}
+
+.section h3 {
+	margin: 30px 0 10px;	
+}
+
+#primary {
+	padding-top: 40px;
+	padding-bottom: 40px;	
+}
+
+.feature-image {
+	display: table;
+	width: 100%;
+}
+
+.feature-image-default {
+	background: url('../img/stuff-feature.jpg') no-repeat;
+	background-size: cover;	
+}
+
+.feature-image-default-alt {
+	background: url('../img/hipster-stuff.jpg') no-repeat;
+	background-size: cover;	
+}
+
+.feature-image h1 {
+	display: table-cell;
+	vertical-align: middle;
+	text-align: center;
+	color: white;	
+}
+
+#optin {
+	background: #3E4249;
+	padding: 20px 0;
+	color: white;
+	-webkit-font-smoothing: antialiased;
+	text-rendering: optimizelegibility;
+	font-size: 1.2em;
+}
+
+#optin p {
+	margin: 7px 0 0 0;
+		
+}
+
+#who-benefits {
+	background: white;	
+}
+
+#course-features {
+	background: #42493E;
+	color: white;
+	text-align: center;	
+}
+
+#product-features {
+	background: url('tile.jpg')	center center repeat fixed;
+	text-align: center;	
+}
+
+#featurette {
+	background: url('../img/stuff-bg.jpg') 50% 100% repeat fixed;	
+	background-size: cover; /* Will make the background image size with the browser */
+	text-align: center;
+	color: white;
+}
+
+/* TESTIMONIAL =========================================*/
+
+#kudos {
+	text-align: center;
+	background: url('tile.jpg')	center center repeat fixed;
+
+}
+
+.testimonial {
+	margin-bottom: 60px;
+}
+
+.testimonial img {
+	-webkit-border-radius: 50%; /* Makes a circle */	
+	-moz-border-radius: 50%;  /* Makes a circle */
+	border-radius: 50%;  /* Makes a circle */
+	
+}
+
+/* SIGNUP =========================================*/
+
+#signup {
+	text-align: center;
+	background: url('signup-bg.png')	center center repeat fixed;
+	background-size: cover;
+	color: white;
+	padding: 140px 0;
+}
+
+#signup h2 {
+	font-weight: normal; /* Don't want it to be bold */	
+}
+
+#signup h2 strong {
+	border-bottom: solid 2px #dd5638;
+}
+
+#signup .btn {
+	font-size: 24px;	
+}
+
+/* FOOTER =========================================*/
+
 footer {
 	background: #3E4249;
 	color: white;
@@ -123,3 +423,234 @@ footer li:signup-link a {
 footer li:signup-link a:hover {
 	font-weight: bold;
 }
+
+/* Blog Styles */
+
+.post,
+.widget {
+	position: relative;
+	border: solid 1px #ddd;
+	background: white;
+	margin: 0 0 40px;
+	-webkit-border-radius: 4px;
+	-moz-border-radius: 4px;
+	border-radius: 4px;
+}
+
+.post header,
+.post .postexcerpt,
+.post .post-body,
+#comments .comments-wrap {
+	padding: 20px;
+}
+
+.post header h1,
+.post header h3 {
+	margin: 0 0 15px;
+	padding: 0 0 15px;
+	border-bottom: solid 1px #ddd;
+}
+
+.post header h1 {
+	font-size: 24px;
+}
+
+.post-image {
+	height: auto;	
+}
+
+.post-details {
+	font-size: 12px;
+	width: 90%;	
+}
+
+.post-details i.fa {
+	padding-left: 10px;	
+}
+
+.post-details i.fa:first-child { /* Effects only the first child */
+	padding: 0px;	
+}
+
+/* WIDGETS */
+
+.widget {
+	padding: 20px;
+}
+
+.widget h4 {
+	margin: 0 0 10px;
+	border-bottom: solid 1px #ddd;	
+}
+
+.widget ul {
+	list-style: none;
+	margin: 0;
+	padding: 0;	
+}
+
+.widget li {
+	margin: 0 0 5px;	
+}
+
+.widget ul li:hover { /* Animates text slightly when hover */
+	position: relative;
+	left: 2px;
+}
+
+/* BLOG COMMENTS */
+
+.post-comments-badge {
+	height: 70px;
+	width: 70px;
+	position: absolute;
+	top: 25px;
+	right: 20px;
+	border: none;
+	-webkit-border-radius: 50%;
+	-moz-border-radius: 50%;
+	border-radius: 50%;
+	background: #79B044;
+	text-align: center;
+	display: table;
+}
+
+.post-comments-badge a {
+	display: table-cell;
+	vertical-align: middle;
+	color: white;
+	font-size: 20px;
+	line-height: 20px;
+}
+
+.post-comments-badge i.fa {
+	display: block;
+	font-size: 15px;
+	padding: 0;
+	margin-bottom: 4px;
+}
+
+.post-comments-badge:hover {
+	background-color: #5B9623;	
+}
+
+#comments h3 {
+	text-align: center;
+}
+
+#comments h4 {
+	font-size: 1.3em;
+}
+
+#comments ol {
+	list-tyle: none;
+	padding: 0;
+	margin: 0;
+}
+
+#comments ol li {
+	background: rgba(0,0,0,0.02); /* Will get darker and darker with each nested level */
+	padding: 10px 20px;
+	margin: 10px 0;
+	-webkit-border-radius: 4px;
+	-moz-border-radius: 4px;
+	border-radius: 4px;
+	border: solid 1px rgba(0,0,0,0.03);
+}
+
+#comments ol li ol.children {
+	padding: 0;
+	list-style: none;
+	font-size: 0.96em;
+}
+
+#leave-comment {
+	margin: 40px 0 0;
+	padding: 20px 0 0;
+	border-top: solid 1px #eee;
+}
+
+/* RESOURCES */
+
+.resource {
+	width: 31.33333333%;
+	float: left;
+	margin: 0 3% 40px 0;	
+}
+
+.resource:nth-child(3n) { /* selects every 3rd element */
+	margin-right: 0px;
+}
+
+/* SPRITES */
+
+i.ci {
+	display: inline-block;
+	height: 40px;
+	width: 40px; /* Sprite images must be equal distance apart */
+	background: url('icon-sprite.png') no-repeat;
+}
+
+.ci.ci-computer 	{ background-position: 0 0; }
+.ci.ci-watch		{ background-position: -40px 0; }
+.ci.ci-calendar		{ background-position: -80px 0; }
+.ci.ci-community	{ background-position: -120px 0; }
+.ci.ci-instructor	{ background-position: -160px 0; }
+.ci.ci-device		{ background-position: -200px 0; }
+
+/* FORMS */
+
+label {
+	display: block;
+	font-weight: bold;	
+}
+
+input[text="text"],
+input[text="email"],
+input[text="url"],
+input[text="password"],
+input[text="search"],
+textarea {
+	color: #666;
+	border: 1px solid #ccc;
+	-webkit-border-radius: 3px;
+	-moz-border-radius: 3px;
+	border-radius: 3px;
+	display: block;
+	-webkit-box-sizing: border-box;  /* Width includes the border, not just contents */
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
+	width: 100%;
+}
+
+input[type="submit"],
+button[type="submit"] {
+	display: inline-block;
+	margin-bottom: 0;
+	font-size: 18px;
+	font-weight: bold;
+	line-height: 1.33;
+	text-align: center;
+	white-space: nowrap;
+	vertical-align: middle;
+	cursor: pointer;
+	-webkit-user-select: none;
+	-moz-user-select: none;
+	-ms-user-select: none;
+	user-select: none;
+	background-image: none;
+	border: none;
+	-webkit-border-radius: 6px;
+	-moz-border-radius: 6px;
+	border-radius: 6px;
+	
+}
+
+input[type="submit"]:hover,
+button[type="submit"]:hover {
+	outline: none;
+	border: none;
+	background: #aaa;
+
+}
+/* MEDIA QUERIES */

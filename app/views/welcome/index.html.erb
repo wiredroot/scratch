@@ -1,35 +1,5 @@
-	<section id="hero" data-type="background" data-speed="5">
-    	<article>
-        	<div class="container clearfix">
-				<div class="row">
-                	<div class="col-sm-5">
-                    	<img src="assets/img/logo-badge.png" width="500" height="383" alt="Bootstrap to Wordpress" />
-                    </div><!-- col-sm-5 -->
-                    
-                    <div class="col-sm-7 hero-text">
-                    	<h1>Get Savvy with Scratch!</h1>
-                        <p class="lead">Learn advanced techniques to make the money you earn work for you, with easy-to-use tutorials and a proprietary program designed with you in mind.</p>
-                        <div id="price-timeline">
-                        	<div class="price active">
-                            	<h4>Pre-Launch Price <small>Ends soon!</small></h4>
-                                <span>$149</span>
-                            </div><!-- price -->
-                        	<div class="price">
-                            	<h4>Launch Price <small>Coming soon!</small></h4>
-                                <span>$299</span>
-                            </div><!-- price -->
-                        	<div class="price">
-                            	<h4>Final Price <small>Coming soon!</small></h4>
-                                <span>$399</span>
-                            </div><!-- price -->
-                        </div><!-- price-timeline -->
-						            <%= link_to "Enroll", "enroll.html", class: "btn btn-lg btn-danger" %>
-                    </div><!-- col-sm-7 -->
-                </div><!-- row -->
-            </div><!-- container -->
-	</section>
+    <%= render 'hero' %>
+    <%= render 'boost' %>
+    <%= render 'testimonials' %>
+    <%= render 'signup' %>
 
-
-
-<%= link_to 'Profile Page', controller: 'profiles' %><br>
-<%= link_to 'Stocks Page', controller: 'stocks' %>
