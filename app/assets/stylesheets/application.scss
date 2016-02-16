@@ -138,6 +138,11 @@ img {
 	max-width: 100%; /* Make our logo same size as its container, so no over-flow */
 }
 
+#mylogo {
+  margin-top: -5px;	
+}
+
+
 .modal-content {
 	background: url('/assets/tile.jpg') top left repeat;	
 }
@@ -422,6 +427,11 @@ footer li:signup-link a {
 
 footer li:signup-link a:hover {
 	font-weight: bold;
+}
+
+.footerbrand {
+	font-family: "Tw Cen MT";
+	font-size: 18px;
 }
 
 /* Blog Styles */
