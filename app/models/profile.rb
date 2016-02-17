@@ -4,9 +4,14 @@ class Profile < ActiveRecord::Base
       length: { minimum: 3}
   validates :lastname, presence: true,
       length: { minimum: 3 }  
-  validates :email, presence: true,
-      length: { minimum: 3 }  
 
-  validates :dob, presence: true
-  validates :hired, presence: true
+  VALID_EMAIL_REGEX = /\A[\w+\-.]+@[a-z\d\-.]+\.[a-z]+\z/i
+  validates :email, presence: true,
+      length: { minimum: 6 },
+      uniqueness: { case_sensitive: false},
+      format: { with: VALID_EMAIL_REGEX }
+
+  validates :password, presence: true,
+      length: { minimum: 8}
+  has_secure_password
 end

@@ -1,16 +1,34 @@
-<p>
-  <strong>Full Name</strong>
-  <%= @profile.firstname %> <%= @profile.lastname %>, <%= @profile.jobtitle %>
-</p>
-
-<p>
-  <strong>Dates:</strong>
-  Date of Birth: <%= @profile.dob %><br>
-  Hired Date: <%= @profile.hired %><br>
-  Terminated: <%= @profile.terminated %>
-</p>
-
+<div class="container">
+  <div class="row">
+    <h2>Profile Info</h2>
+    <div class="col-sm-2">
+      <img id="myavatar" src="/assets/avatar_blank.png" alt="Avatar" /></a>
+    </div>
+    <div class="col-sm-4">
+      <div class="prof-name"><%= @profile.firstname %> <%= @profile.lastname %></div>
+      <div class="prof-title">
+      <% if @profile.jobtitle? %>
+         <%= @profile.jobtitle %>
+      <% else %>
+         Employee
+      <% end %>
+      </div>
+      <br>
+      <div class="dates-style" id="dates-cont">
+        <div id="dates-header">Profile Dates:</div>
+            <ul class="prof-dates">
+              <li class="prof-dates">Date of Birth: <%= (@profile.dob? ? @profile.dob : "Unknown") %></li>
+              <li class="prof-dates">Hired Date: <%= (@profile.hired? ? @profile.hired : "Unknown") %></li>
+              <li class="prof-dates">Terminated: <%= (@profile.terminated? ? @profile.terminated : "Unknown") %></li>
+            </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+  
+<!--
 <%= link_to 'Edit', edit_profile_path(@profile) %> |
 <%= link_to 'Back', profiles_path %>
 
-
+-->

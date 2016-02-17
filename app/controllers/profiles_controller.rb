@@ -1,6 +1,7 @@
 class ProfilesController < ApplicationController
-  http_basic_authenticate_with name: "scratch", password: "savvy", except: [:index, :show]
-
+    #validates_confirmation_of :password
+    #attr_accessible :password, :password_confirmation
+    
   def new
     @profile = Profile.new
   end
@@ -9,9 +10,12 @@ class ProfilesController < ApplicationController
     @profile = Profile.new(profile_params)
     
     if @profile.save
-      redirect_to @profile
+      flash[:success] = "Your account has been created successfully."
+      session[:profile_id] = @profile.id
+      redirect_to profile_path(session[:profile_id])
     else
-      render 'new'
+      flash[:error] = "There were errors with your account setup. Try again."
+      redirect_to register_path
     end
   end
   
@@ -48,7 +52,7 @@ class ProfilesController < ApplicationController
 
   private
     def profile_params
-      params.require(:profile).permit(:firstname, :lastname, :dob, :hired,  :workphone, :jobtitle, :terminated,:homephone, :email, :comments)
+      params.require(:profile).permit(:firstname, :lastname, :password, :password_confirmation, :dob, :hired,  :workphone, :jobtitle, :terminated,:homephone, :email, :comments)
     end
   
 end

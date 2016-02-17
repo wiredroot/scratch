@@ -2,8 +2,13 @@ Rails.application.routes.draw do
   # get '/home', to 'pages#home' is how you'd do your own thing
   get 'welcome/index'
   get '/features' => 'pages#features'
-  get '/login' => 'pages#login'
   get '/enroll' => 'pages#enroll'
+  get '/register' => 'profiles#new'
+  get '/login' => 'pages#login'
+  post '/login' => 'logins#create'
+  post '/register' => 'profiles#create'
+  get 'logout' => 'logins#destroy'
+  
   
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
@@ -11,7 +16,7 @@ Rails.application.routes.draw do
   # You can have the root of your site routed with "root"
 Rails.application.routes.draw do
   resources :stocks
-  resources :profiles
+  resources :profiles, except: [:new]
   resources :transactions
   root 'welcome#index'
 end

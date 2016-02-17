@@ -70,12 +70,49 @@ a:hover {
 	color: #C9302C;
 }
 
+/* PROFILE  =========================================*/
+
+.prof-name {
+	text-align: center;
+	font-size: 24px;
+	font-weight: bold;
+}
+.prof-title {
+	text-align: center;
+	font-style: italic;
+	font-weight: normal;
+}
+.prof-dates {
+	list-style-type: none;
+	
+}
+#dates-cont {
+	background-color: #eee;
+	width: 70%;
+	margin: 0 auto;
+}
+
+#dates-header {
+  font-size: 16px;
+  text-decoration: underline;
+}
+.prof-dates {
+	margin-left: -10px;
+}
+.dates-style {
+	font-family: "Tw Cen MT";
+}
+
 /* BUTTON =========================================*/
 
-button, input, .btn, a.btn {
+button, .btn, a.btn {
 	-webkit-font-smoothing: antialiased;
 	text-rendering: optimizelegibility;
 	color: white;	
+}
+
+.group-padded {
+	padding-bottom: 30px;	
 }
 
 .btn {

@@ -1,34 +1,40 @@
-	<section id="login_main">
-		<div class="container">
-		    <div class="row">
-    		    <div id="formlogin" class="well col-sm-6 col-sm-offset-2">
-    		      <h2>Registration Form</h2>
+      <% @profile = Profile.new %>
+
+      <% if @profile.new_record? %>
+          <h2>Registration Form</h2>
+          <p style="padding-bottom:10px;">Welcome!  Please fill out the registration form below to signup with the site.</p>
+      <% else %>
+          <h2>Login Form</h2>
+          <p style="padding-bottom:10px;">Please login to your account.</p>
+      <% end %>
+
       <%= form_for @profile do |f| %>
-          <div class ="form-group group-padded">
+          <% if @profile.new_record? %>
+          <div class ="form-group">
               <%= f.label :firstname, {:class => 'control-label col-sm-3' } %>
               <%= f.text_field :firstname, {:class => 'col-sm-9'} %>
           </div>
-          <div class ="form-group group-padded">
+          <div class ="form-group">
               <%= f.label :lastname, {:class => 'control-label col-sm-3' } %>
               <%= f.text_field :lastname, {:class => 'col-sm-9'} %>
           </div>
-          <div class="form-group group-padded">
+          <% end %>
+          <div class="form-group">
               <%= f.label :email, {:class => 'control-label col-sm-3' } %>
               <%= f.text_field :email, {:class => 'col-sm-9'} %>
           </div>
-          <div class="form-group group-padded">
+          <div class="form-group">
               <%= f.label :password, class: 'control-label col-sm-3' %>
               <%= f.password_field :password, class: 'col-sm-9' %>
           </div>
-          <!--
-          <div class ="form-group group-padded">
+          <% if @profile.new_record? %>
+          <div class ="form-group">
               <%= f.label :password_confirmation, {:class => 'control-label col-sm-3' } %>
-              <%= f.password_field :password_confirmation, {:class => 'col-sm-9'} %>
-          </div>-->
+              <%= f.text_field :password_confirmation, {:class => 'col-sm-9'} %>
+          </div>
+          <% end %>
 
           <%= f.submit(@profile.new_record? ? 'Register' : 'Edit Profile', class: "btn btn-success") %>
       <% end %>
-                </div>
-            </div><!-- end row -->
-        </div><!-- container -->
-    </section>
+
+
