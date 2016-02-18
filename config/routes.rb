@@ -2,7 +2,7 @@ Rails.application.routes.draw do
   # get '/home', to 'pages#home' is how you'd do your own thing
   get 'welcome/index'
   get '/features' => 'pages#features'
-  get '/enroll' => 'pages#enroll'
+  get '/enroll' => 'profiles#new'
   get '/register' => 'profiles#new'
   get '/login' => 'pages#login'
   post '/login' => 'logins#create'

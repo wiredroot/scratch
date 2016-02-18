@@ -14,7 +14,7 @@ class ProfilesController < ApplicationController
       session[:profile_id] = @profile.id
       redirect_to profile_path(session[:profile_id])
     else
-      flash[:error] = "There were errors with your account setup. Try again."
+      flash[:danger] = "There were errors with your account setup. Try again."
       redirect_to register_path
     end
   end
